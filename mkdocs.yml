@@ -1,0 +1,11 @@
+site_name: Citrix Receiver for Linux 13.5 Command-line Reference
+site_description: Citrix Receiver for Linux 13.5 Command-line Reference
+theme_dir: theme_onepage
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+     anchorlink: True
+
+pages:
+- Index: index.md
