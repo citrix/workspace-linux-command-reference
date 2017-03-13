@@ -1,6 +1,6 @@
-# Command-line parameters
+# Citrix Receiver for Linux 13.5 Command Reference
 
-The tables below list Citrix Receiver for Linux command-line parameters. 
+The tables below list Citrix Receiver for Linux 13.5 command-line parameters. 
 
 !!!tip "Note"
         A list of the parameters can be obtained typing `wfica` or `storebrowse` with 
