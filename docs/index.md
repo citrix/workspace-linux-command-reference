@@ -1,6 +1,6 @@
-# Citrix Receiver for Linux 13.6 Command Reference
+# Citrix Receiver for Linux 13.7 Command Reference
 
-The tables below list Citrix Receiver for Linux 13.6 command-line parameters. 
+The tables below list Citrix Receiver for Linux 13.7 command-line parameters. 
 
 !!!tip "Note"
         A list of the parameters can be obtained typing `wfica` or `storebrowse` with 
