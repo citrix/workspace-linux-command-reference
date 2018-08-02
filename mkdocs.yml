@@ -1,5 +1,5 @@
-site_name: Citrix Receiver for Linux 13.9.1 Command-line Reference
-site_description: Citrix Receiver for Linux 13.9.1 Command-line Reference
+site_name: Citrix Receiver for Linux 13.10 Command-line Reference
+site_description: Citrix Receiver for Linux 13.10 Command-line Reference
 theme_dir: citrix-sdk
 markdown_extensions:
   - admonition
