@@ -1,6 +1,6 @@
-# Citrix Receiver for Linux 13.10 Command Reference
+# Citrix Workspace app for Linux 1808 Command Reference
 
-The tables below list Citrix Receiver for Linux 13.10 command-line parameters. 
+The tables below list Citrix Workspace app for Linux 1808 command-line parameters. 
 
 !!!tip "Note"
         A list of the parameters can be obtained typing `wfica` or `storebrowse` with 
@@ -17,11 +17,11 @@ You can use a connection file simply by typing its name after `wfica` without an
 | Specify a connection file. | `-file connection <filename>` |
 | Set alternative protocol file. This enables the use of an alternative module.ini. | `-protocolfile filename` |
 | Set alternative client configuration file. This enables the use of an alternative wfclient.ini. | `-clientfile filename` |
-| Display a different name for Citrix Receiver, specified by name, wherever that name appears. The default name is the device name. However, if you use a Sunray device, the default name is derived from the device’s MAC address. This is overridden by the ClientName entry in .ICAClient/wfclient.ini, which is itself overridden by issuing the `-clientname` name command. | `-clientname name` |
+| Display a different name for Citrix Workspace app, specified by name, wherever that name appears. The default name is the device name. However, if you use a Sunray device, the default name is derived from the device’s MAC address. This is overridden by the ClientName entry in .ICAClient/wfclient.ini, which is itself overridden by issuing the `-clientname` name command. | `-clientname name` |
 | Show this list of parameters. | `-help` |
 | Display version information. | `-version` |
 | Show error numbers and string. | `-errno` |
-| Set the location of Receiver installation files. This is equivalent to setting the ICAROOT environment variable. | `--icaroot directory` |
+| Set the location of Workspace app installation files. This is equivalent to setting the ICAROOT environment variable. | `--icaroot directory` |
 | Suppress connection dialog boxes. | `-quiet` |
 | Enable key logging. | `-keylog` |
 | Set session geometry. | `-geometry WxH+X+Y` |
@@ -42,7 +42,7 @@ You can use a connection file simply by typing its name after `wfica` without an
 | Set drive mapping overrides. These are of the form `A$=path`, where **path** can contain an environment variable (for example `A$=$HOME/tmp`). This option must be repeated for each drive to be overridden. For the override to work, there must be an existing mapping, although it need not be enabled. | `-drivemap string` |
 
 !!!tip "Note"
-		All `wfica` command line options can also be specified in the environment variable `WFICA_OPTS`, allowing them to be used with the Receiver native UI or with Citrix StoreFront.
+		All `wfica` command line options can also be specified in the environment variable `WFICA_OPTS`, allowing them to be used with the Workspace app native UI or with Citrix StoreFront.
 
 ## storebrowse
 
@@ -59,10 +59,10 @@ The following table documents the options that you can use with the `storebrowse
 | `-U`, `--username` | Passes the user name to the server. | When used with StoreFront, the site must be configured to support HTTP BasicAuth, otherwise these will be ignored. |
 | `-P`, `--password` | Passes the password to the server. | When used with StoreFront, the site must be configured to support HTTP BasicAuth, otherwise these will be ignored. |
 | `-D`, `--domain` | Passes the domain to the server. | When used with StoreFront, the site must be configured to support HTTP BasicAuth, otherwise these will be ignored. |
-| `-r`, `--icaroot` | Specifies the root directory of the Receiver for Linux installation. | If not specified, the value is determined at run time. |
+| `-r`, `--icaroot` | Specifies the root directory of the Workspace app for Linux installation. | If not specified, the value is determined at run time. |
 | `-i`, `--icons` Use in conjunction with the `-E`, or `-S` option. | Fetches desktop or application icons, in PNG format, of the size and depth given by the `best` or `size` argument.<br/> If the `best` argument is used, the best sized icon available on the server is fetched. You can convert this to any size required. The `best` argument is the most efficient for storage and bandwidth, and can simplify scripting. <br/> If the `size` argument is used, an icon is fetched of the specified size and depth. <br/> In both cases, icons are saved in a file for each of the resources that the `–E` or `-S` option returns. | The `best` argument creates an icon of the form **&lt;resource name&gt;.png**. <br/>The `size` argument is of the form **WxB**, where **W** is the width of the icon (all icons are square, so only one value is needed to specify the size), and **B** is the color depth (that is, the number of bits per pixel). **W** is required but **B** is optional. If it is not specified, icons of all available image depths are fetched for that size. The files that are created are named **&lt;resource name&gt;_WxWxB.png**. |
 | `-u`, `--unsubscribe` | Unsubscribes the specified resource from the given store. |   |
-| `-s`, `--subscribe` | Subscribes the specified resource from the given store. | If you use a different Receiver, subscriptions on Program Neighborhood Agent servers are lost. |
+| `-s`, `--subscribe` | Subscribes the specified resource from the given store. | If you use a different Workspace app, subscriptions on Program Neighborhood Agent servers are lost. |
 | `-W [r|R]`, `--reconnect [r|R]` | Reconnects disconnected and active sessions. | `r` reconnects all disconnected sessions for the user. `R` reconnects all active and disconnected sessions. |
 | `-WD`, `--disconnect` | Disconnects all sessions. | Only affects sessions to the store specified on the command line. |
 | `-WT`, `--logoff` | Logs off all sessions. |Only affects sessions to the store specified on the command line. |
@@ -71,7 +71,7 @@ The following table documents the options that you can use with the `storebrowse
 | `-g`, `--storegateway` | Sets the default gateway for a store that is already registered with the Service Record daemon. | This command takes the following form: `./util/storebrowse --storegateway "<unique gateway name>" '<store URL>'` <br/> **Important:** The unique gateway name must be in the list of gateways for the specified store. |
 | `-d`, `--deletestore` | Deregisters a store with the Service Record daemon. | |
 | `-c`, `--configselfservice` | Gets and sets the self-service UI settings that are stored in StoreCache.ctx. Takes an argument of the form `<entry[=value]>`. If only entry is present, the setting's current value is printed. If a value is present, it is used to configure the setting. | Example: `storebrowse --configselfservice SharedUserMode=True` <br/> **Important:** Both entry and value are case sensitive. Commands that use this option will fail if the case is different to the documented case of the setting itself (in StoreCache.ctx).|
-| `-C`, `--addCR` | Reads the provided Citrix Receiver (CR) file, and prompts the user to add each store. | The output is the same as `-a` but might contain more than one store, separated by newlines. |
+| `-C`, `--addCR` | Reads the provided Citrix Workspace app (CR) file, and prompts the user to add each store. | The output is the same as `-a` but might contain more than one store, separated by newlines. |
 | `-K`, `--killdaemon` | Terminates the storebrowse daemon process. | All credentials and tokens are purged. |
 
 ## pnabrowse
@@ -113,7 +113,7 @@ The following options provide Citrix XenApp (Program Neighborhood Agent) Service
 | `-WT` | Terminates all sessions for the user. |
 | `-Wr` | Reconnects to all disconnected sessions for the user. |
 | `-WR` | Reconnects to all sessions (active or disconnected) for the user. |
-| `-k`  | Use an existing Kerberos ticket to authenticate, rather than user name, password, and domain. This requires configuration of the client and server. For more information, see the Using Kerberos with Citrix Receiver for Linux Guide. This is available from Citrix under a non-disclosure agreement. |
+| `-k`  | Use an existing Kerberos ticket to authenticate, rather than user name, password, and domain. This requires configuration of the client and server. For more information, see the Using Kerberos with Citrix Workspace app for Linux Guide. This is available from Citrix under a non-disclosure agreement. |
 
 The following common options are used: 
 
