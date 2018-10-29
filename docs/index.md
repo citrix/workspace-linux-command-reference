@@ -1,6 +1,6 @@
-# Citrix Workspace app 1809 for Linux Command Reference
+# Citrix Workspace app for Linux Command Reference
 
-The tables below list Citrix Workspace app 1809 for Linux command-line parameters. 
+The tables below list Citrix Workspace app for Linux command-line parameters. 
 
 !!!tip "Note"
         A list of the parameters can be obtained typing `wfica` or `storebrowse` with 
