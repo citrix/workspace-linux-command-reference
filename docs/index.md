@@ -26,7 +26,9 @@ You can use a connection file simply by typing its name after `wfica` without an
 | Enable key logging. | `-keylog` |
 | Set session geometry. | `-geometry WxH+X+Y` |
 | Set color depth. | `-depth <4 | 8 | 16 | 24 | auto>` |
-| Set monitor spanning. | `-span [h][o][a|mon1[,mon2[,mon3,mon4]]]` |
+| Set monitor spanning. | `-span [h]` |
+| Set monitor spanning. | `-span [o]<ica-file>` |
+| Set monitor spanning. | `-span [a|mon1[,mon2[,mon3,mon4]]]<ica-file>` |
 | Use private colormap. | `-private` |
 | Use shared colormap. | `-shared` |
 | Specify a string to be added to a published application. | `-param string` |
